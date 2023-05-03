@@ -71,7 +71,7 @@
         situacao: this.situacao,
         prioridade: this.prioridade,
       }
-      axios.post('https://api-tasks-fastapi-production.up.railway.app/adicionar', data)
+      axios.post('https://api-tasks-fastapi-production.up.railway.app/adicionar/', data)
         .then(response => {
           console.log(response.data)
           this.tarefas.push(response.data)
