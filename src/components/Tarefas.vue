@@ -24,12 +24,12 @@ export default {
   },
   methods: {
     getTarefas() {
-      axios.get('https://api-tasks-fastapi-production.up.railway.app/tarefas').then((response) => {
+      axios.get('https://django-server-production-61b8.up.railway.app/task_api/').then((response) => {
         this.tarefas = response.data;
       });
     },
     handleDelete(id) {
-      axios.delete(`https://api-tasks-fastapi-production.up.railway.app/deletar/${id}`).then(() => {
+      axios.delete(`https://django-server-production-61b8.up.railway.app/task_api/${id}`).then(() => {
         this.getTarefas();
       });
     },
