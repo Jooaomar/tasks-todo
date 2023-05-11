@@ -29,7 +29,7 @@ export default {
       });
     },
     handleDelete(id) {
-      axios.delete(`https://django-server-production-61b8.up.railway.app/task_api/${parseInt(id)}`).then(() => {
+      axios.delete(`https://django-server-production-61b8.up.railway.app/task_api/${id}`).then(() => {
         this.getTarefas();
       });
     },
