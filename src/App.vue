@@ -71,7 +71,7 @@
         situacao: this.situacao,
         prioridade: this.prioridade,
       }
-      axios.post('https://api-tasks-fastapi-production.up.railway.app/adicionar/', data)
+      axios.post('https://django-server-production-61b8.up.railway.app/task_api/', data)
         .then(response => {
           console.log(response.data)
           this.tarefas.push(response.data)
@@ -87,7 +87,7 @@
         })
     },
     getTarefas() {
-      axios.get('https://api-tasks-fastapi-production.up.railway.app/tarefas')
+      axios.get('https://django-server-production-61b8.up.railway.app/task_api/')
         .then(response => {
           this.tarefas = response.data
         })
